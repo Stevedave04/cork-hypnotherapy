@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Cork Hypnotherapy to book your free initial consultation. In-clinic in Douglas, Cork or online across Ireland. Call, email or use our contact form.">
+  <title>Contact &amp; Book | Cork Hypnotherapy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.6fr;
+      gap: var(--space-2xl);
+      align-items: start;
+    }
+    @media (max-width: 768px) {
+      .contact-grid { grid-template-columns: 1fr; }
+    }
+
+    .contact-info-card {
+      background: var(--color-surface);
+      border-radius: var(--radius-lg);
+      padding: var(--space-xl);
+      border: 1px solid var(--color-border);
+      box-shadow: var(--shadow-sm);
+    }
+    .contact-item {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--color-border);
+    }
+    .contact-item:last-child { border-bottom: none; padding-bottom: 0; }
+    .contact-item:first-child { padding-top: 0; }
+    .contact-item-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: var(--radius-sm);
+      background: var(--color-surface-2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .contact-item-icon svg { width: 20px; height: 20px; color: var(--color-primary); }
+    .contact-item-label {
+      font-size: var(--text-xs);
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--color-secondary);
+      margin-bottom: 0.2rem;
+    }
+    .contact-item-value {
+      font-size: var(--text-base);
+      font-weight: 500;
+      color: var(--color-text);
+    }
+    .contact-item-value a {
+      color: var(--color-text);
+      text-decoration: none;
+    }
+    .contact-item-value a:hover { color: var(--color-primary); }
+    .contact-item-sub {
+      font-size: var(--text-sm);
+      color: var(--color-muted);
+      margin-top: 0.15rem;
+    }
+
+    .form-card {
+      background: var(--color-surface);
+      border-radius: var(--radius-lg);
+      padding: var(--space-xl);
+      border: 1px solid var(--color-border);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+    @media (max-width: 480px) {
+      .form-row { grid-template-columns: 1fr; }
+    }
+
+    .success-msg {
+      display: none;
+      background: #f0fdf4;
+      border: 1px solid #86efac;
+      border-radius: var(--radius-sm);
+      padding: 1rem 1.25rem;
+      color: #166534;
+      font-size: var(--text-sm);
+      font-weight: 500;
+      margin-bottom: 1.25rem;
+    }
+    .success-msg.visible { display: flex; align-items: center; gap: 0.75rem; }
+
+    .hours-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.4rem 1.5rem;
+      font-size: var(--text-sm);
+    }
+    .hours-day { color: var(--color-text); font-weight: 500; }
+    .hours-time { color: var(--color-muted); }
+  </style>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <nav class="site-nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="Cork Hypnotherapy home">
+        Cork Hypnotherapy
+        <span>Transform Your Mind</span>
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+      <ul class="nav-links" id="nav-menu" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="online.html">Online Sessions</a></li>
+        <li><a href="contact.html" class="active nav-cta" aria-current="page">Book a Consultation</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main id="main-content">
+
+    <header class="page-header" aria-labelledby="page-heading">
+      <div class="container-narrow">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span aria-hidden="true">/</span>
+          <span aria-current="page">Contact</span>
+        </nav>
+        <h1 id="page-heading">Get in Touch with John</h1>
+        <p>Book your free consultation online using the calendar below, or send a message and John will get back to you within one working day.</p>
+      </div>
+    </header>
+
+    <!-- Calendly booking section -->
+    <section class="section-alt" aria-labelledby="calendly-heading">
+      <div class="container-narrow">
+        <div class="section-header text-center">
+          <p class="eyebrow">Book Online</p>
+          <h2 id="calendly-heading">Choose a Time That Suits You</h2>
+          <p>Select a convenient slot below for your free 30-minute initial consultation with John. In-clinic and online appointments available.</p>
+        </div>
+        <!-- Calendly inline widget begin -->
+        <div class="calendly-inline-widget" data-url="https://calendly.com/johnaoconnor95/30min" style="min-width:320px;height:700px;border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-md);"></div>
+        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+        <!-- Calendly inline widget end -->
+      </div>
+    </section>
+
+    <!-- Main contact section -->
+    <section aria-labelledby="contact-section-heading">
+      <div class="container">
+        <h2 id="contact-section-heading" class="visually-hidden">Contact information and booking form</h2>
+        <div class="contact-grid">
+
+          <!-- Left: info -->
+          <div>
+            <div class="contact-info-card" style="margin-bottom:1.5rem;">
+              <h3 style="font-size:var(--text-xl);margin-bottom:1rem;">Contact Details</h3>
+
+              <div class="contact-item">
+                <div class="contact-item-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.29h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 6 6l1.27-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16.92z"/></svg>
+                </div>
+                <div>
+                  <div class="contact-item-label">Phone</div>
+                  <div class="contact-item-value"><a href="tel:0879394128">087 939 4128</a></div>
+                  <div class="contact-item-sub">Available during clinic hours</div>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-item-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                </div>
+                <div>
+                  <div class="contact-item-label">Email</div>
+                  <div class="contact-item-value"><a href="mailto:hello@corkhypnotherapy.com">hello@corkhypnotherapy.com</a></div>
+                  <div class="contact-item-sub">Response within one working day</div>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-item-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                </div>
+                <div>
+                  <div class="contact-item-label">Clinic Address</div>
+                  <div class="contact-item-value">Ballyva House, Ardfield<br>Clonakilty, Co. Cork</div>
+                  <div class="contact-item-sub">Free parking available on site</div>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-item-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                </div>
+                <div>
+                  <div class="contact-item-label">Online Sessions</div>
+                  <div class="contact-item-value">Zoom or Google Meet</div>
+                  <div class="contact-item-sub">Available to clients anywhere in Ireland and beyond</div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Hours -->
+            <div class="contact-info-card" style="margin-bottom:1.5rem;">
+              <h3 style="font-size:var(--text-xl);margin-bottom:1rem;">Opening Hours</h3>
+              <div class="hours-grid">
+                <span class="hours-day">Monday</span>    <span class="hours-time">9:00am to 7:00pm</span>
+                <span class="hours-day">Tuesday</span>   <span class="hours-time">9:00am to 7:00pm</span>
+                <span class="hours-day">Wednesday</span> <span class="hours-time">9:00am to 7:00pm</span>
+                <span class="hours-day">Thursday</span>  <span class="hours-time">9:00am to 7:00pm</span>
+                <span class="hours-day">Friday</span>    <span class="hours-time">9:00am to 6:00pm</span>
+                <span class="hours-day">Saturday</span>  <span class="hours-time">10:00am to 3:00pm</span>
+                <span class="hours-day">Sunday</span>    <span class="hours-time">Closed</span>
+              </div>
+              <p style="font-size:var(--text-xs);color:var(--color-muted);margin-top:0.75rem;">Evening online slots available beyond these hours by arrangement.</p>
+            </div>
+
+            <!-- Map -->
+            <div class="map-wrap" aria-label="Map showing clinic location in Douglas, Cork">
+              <iframe
+                src="https://maps.google.com/maps?q=Ballyva House, Ardfield+Clonakilty++Ireland&ie=UTF8&&output=embed"
+                title="Cork Hypnotherapy clinic location, Ballyva House, Ardfield, Clonakilty"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <p style="font-size:var(--text-xs);color:var(--color-muted);margin-top:0.5rem;">
+              <a href="https://maps.google.com/maps?q=Ballyva+House,+Ardfield,+Clonakilty,+Ireland" target="_blank" rel="noopener noreferrer">View larger map</a>
+            </p>
+
+          </div>
+
+          <!-- Right: form -->
+          <div>
+            <div class="form-card">
+              <h3 style="font-size:var(--text-2xl);margin-bottom:0.5rem;">Book Your Free Consultation</h3>
+              <p style="font-size:var(--text-sm);color:var(--color-muted);margin-bottom:1.5rem;">Fill in the form below and we will be in touch within one working day to arrange a convenient time. All enquiries are completely confidential.</p>
+
+              <div class="success-msg" id="success-msg" role="status" aria-live="polite">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                Thank you for your message. We will be in touch very shortly.
+              </div>
+
+              <form id="contact-form" novalidate aria-label="Booking and enquiry form">
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="first-name">First name <span aria-hidden="true" style="color:#c0392b;">*</span></label>
+                    <input
+                      type="text"
+                      id="first-name"
+                      name="first-name"
+                      autocomplete="given-name"
+                      required
+                      aria-required="true"
+                      aria-describedby="first-name-err"
+                      placeholder="e.g. Aoife"
+                    >
+                    <span id="first-name-err" class="field-error" aria-live="polite" style="display:none;font-size:var(--text-xs);color:#c0392b;margin-top:0.3rem;"></span>
+                  </div>
+                  <div class="form-group">
+                    <label for="last-name">Last name <span aria-hidden="true" style="color:#c0392b;">*</span></label>
+                    <input
+                      type="text"
+                      id="last-name"
+                      name="last-name"
+                      autocomplete="family-name"
+                      required
+                      aria-required="true"
+                      aria-describedby="last-name-err"
+                      placeholder="e.g. Murphy"
+                    >
+                    <span id="last-name-err" class="field-error" aria-live="polite" style="display:none;font-size:var(--text-xs);color:#c0392b;margin-top:0.3rem;"></span>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="email">Email address <span aria-hidden="true" style="color:#c0392b;">*</span></label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      autocomplete="email"
+                      required
+                      aria-required="true"
+                      aria-describedby="email-err"
+                      placeholder="your@email.com"
+                    >
+                    <span id="email-err" class="field-error" aria-live="polite" style="display:none;font-size:var(--text-xs);color:#c0392b;margin-top:0.3rem;"></span>
+                  </div>
+                  <div class="form-group">
+                    <label for="phone">Phone number</label>
+                    <input
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      autocomplete="tel"
+                      placeholder="+353 87 000 0000"
+                    >
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="treatment">Area of interest</label>
+                  <select id="treatment" name="treatment">
+                    <option value="">Please select (optional)</option>
+                    <option value="anxiety">Anxiety &amp; Stress</option>
+                    <option value="phobias">Phobias &amp; Fears</option>
+                    <option value="smoking">Stop Smoking</option>
+                    <option value="weight">Weight Management</option>
+                    <option value="sleep">Sleep &amp; Insomnia</option>
+                    <option value="confidence">Confidence &amp; Self-Esteem</option>
+                    <option value="ibs">IBS &amp; Chronic Pain</option>
+                    <option value="trauma">Trauma &amp; PTSD</option>
+                    <option value="depression">Depression &amp; Low Mood</option>
+                    <option value="addiction">Habits &amp; Addiction</option>
+                    <option value="performance">Exam &amp; Performance Anxiety</option>
+                    <option value="grief">Grief &amp; Bereavement</option>
+                    <option value="stroke">Stroke Recovery (SRS Protocol)</option>
+                    <option value="exampass">Exampass (Exam Anxiety)</option>
+                    <option value="other">Something Else</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="session-type">Preferred session type</label>
+                  <select id="session-type" name="session-type">
+                    <option value="">No preference</option>
+                    <option value="in-clinic">In-clinic (Douglas, Cork)</option>
+                    <option value="online">Online (Zoom or Google Meet)</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="message">Tell us a little about what has brought you here <span aria-hidden="true" style="color:#c0392b;">*</span></label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    required
+                    aria-required="true"
+                    aria-describedby="message-err"
+                    placeholder="A brief description helps us prepare for your consultation. Please share only what you are comfortable sharing at this stage."
+                  ></textarea>
+                  <span id="message-err" class="field-error" aria-live="polite" style="display:none;font-size:var(--text-xs);color:#c0392b;margin-top:0.3rem;"></span>
+                </div>
+
+                <div class="form-group" style="display:flex;align-items:flex-start;gap:0.75rem;">
+                  <input
+                    type="checkbox"
+                    id="privacy"
+                    name="privacy"
+                    required
+                    aria-required="true"
+                    aria-describedby="privacy-err"
+                    style="width:20px;height:20px;margin-top:2px;flex-shrink:0;cursor:pointer;"
+                  >
+                  <div>
+                    <label for="privacy" style="font-weight:400;font-size:var(--text-sm);cursor:pointer;">
+                      I have read and agree to the <a href="#" style="color:var(--color-primary);">privacy policy</a>. I understand that my information will be held securely and used only to respond to this enquiry.
+                    </label>
+                    <span id="privacy-err" class="field-error" aria-live="polite" style="display:none;font-size:var(--text-xs);color:#c0392b;margin-top:0.3rem;display:block;"></span>
+                  </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary" id="submit-btn" style="width:100%;justify-content:center;font-size:var(--text-lg);">
+                  Send My Enquiry
+                </button>
+
+                <p style="font-size:var(--text-xs);color:var(--color-muted);margin-top:0.75rem;text-align:center;">We will never share your details with third parties. All communications are strictly confidential.</p>
+
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Reassurance strip -->
+    <section class="section-sm section-teal" aria-labelledby="reassurance-heading">
+      <div class="container">
+        <h2 id="reassurance-heading" class="visually-hidden">Why contact us</h2>
+        <div class="grid-4" style="text-align:center;">
+          <div>
+            <div class="icon-circle" style="margin-inline:auto;" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            </div>
+            <h4>Fully Confidential</h4>
+            <p style="font-size:var(--text-sm);color:var(--color-muted);">Everything you share is protected and handled with complete discretion.</p>
+          </div>
+          <div>
+            <div class="icon-circle" style="margin-inline:auto;" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </div>
+            <h4>No Obligation</h4>
+            <p style="font-size:var(--text-sm);color:var(--color-muted);">The free consultation carries no pressure or commitment to continue.</p>
+          </div>
+          <div>
+            <div class="icon-circle" style="margin-inline:auto;" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <h4>Fast Response</h4>
+            <p style="font-size:var(--text-sm);color:var(--color-muted);">We respond to all enquiries within one working day, often the same day.</p>
+          </div>
+          <div>
+            <div class="icon-circle" style="margin-inline:auto;" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            </div>
+            <h4>Qualified &amp; Insured</h4>
+            <p style="font-size:var(--text-sm);color:var(--color-muted);">Fully qualified, professionally insured, and bound by a strict code of ethics.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" aria-label="Site footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>Cork Hypnotherapy</h3>
+          <p>Professional clinical hypnotherapy in Cork city and online. Helping people across Ireland live calmer, more confident lives.</p>
+          <a href="https://EAPH.ie" title="European Association of Professional Hypnotherapists Accredited Member" target="_blank" rel="noopener noreferrer" style="display:inline-block;margin-top:1rem;">
+            <img src="https://eaph.ie/wp-content/uploads/2019/06/eaph-website-badge-250x.jpg" width="180" height="63" alt="Accredited Member of the European Association of Professional Hypnotherapists" style="display:block;border-radius:4px;">
+          </a>
+        </div>
+        <div class="footer-col">
+          <h4>Treatments</h4>
+          <ul>
+            <li><a href="services.html#anxiety">Anxiety &amp; Stress</a></li>
+            <li><a href="services.html#phobias">Phobias</a></li>
+            <li><a href="services.html#smoking">Stop Smoking</a></li>
+            <li><a href="services.html#weight">Weight Management</a></li>
+            <li><a href="services.html#sleep">Sleep &amp; Insomnia</a></li>
+            <li><a href="services.html#stroke-recovery">Stroke Recovery (SRS)</a></li>
+            <li><a href="services.html#exampass">Exampass</a></li>
+            <li><a href="services.html">All Treatments</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="online.html">Online Sessions</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="tel:0879394128">087 939 4128</a></li>
+            <li><a href="mailto:hello@corkhypnotherapy.com">hello@corkhypnotherapy.com</a></li>
+            <li style="color:rgba(255,255,255,0.55); font-size:var(--text-sm); margin-top:0.25rem;">Ardfield, Clonakilty, Co. Cork</li>
+            <li style="color:rgba(255,255,255,0.55); font-size:var(--text-sm); margin-top:0.5rem;">Mon-Sat: 9am to 7pm</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2025 Cork Hypnotherapy. All rights reserved.</span>
+        <span>Designed with care in Cork, Ireland</span>
+      </div>
+    </div>
+  </footer>
+
+  <style>
+    .visually-hidden {
+      position: absolute;
+      width: 1px; height: 1px;
+      padding: 0; margin: -1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      white-space: nowrap;
+      border: 0;
+    }
+  </style>
+
+  <script>
+    // Nav toggle
+    const toggle = document.querySelector('.nav-toggle');
+    const menu   = document.querySelector('.nav-links');
+    toggle.addEventListener('click', () => {
+      const open = menu.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open);
+    });
+    document.addEventListener('click', e => {
+      if (!e.target.closest('.site-nav')) {
+        menu.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    // Form validation + demo submission
+    const form      = document.getElementById('contact-form');
+    const submitBtn = document.getElementById('submit-btn');
+    const successMsg = document.getElementById('success-msg');
+
+    function showError(fieldId, message) {
+      const el = document.getElementById(fieldId + '-err');
+      if (!el) return;
+      el.textContent = message;
+      el.style.display = 'block';
+      document.getElementById(fieldId).setAttribute('aria-invalid', 'true');
+    }
+    function clearError(fieldId) {
+      const el = document.getElementById(fieldId + '-err');
+      if (!el) return;
+      el.style.display = 'none';
+      const field = document.getElementById(fieldId);
+      if (field) field.removeAttribute('aria-invalid');
+    }
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      let valid = true;
+
+      ['first-name', 'last-name', 'email', 'message'].forEach(clearError);
+
+      const firstName = form.querySelector('#first-name').value.trim();
+      const lastName  = form.querySelector('#last-name').value.trim();
+      const email     = form.querySelector('#email').value.trim();
+      const message   = form.querySelector('#message').value.trim();
+      const privacy   = form.querySelector('#privacy').checked;
+
+      if (!firstName) { showError('first-name', 'Please enter your first name.'); valid = false; }
+      if (!lastName)  { showError('last-name',  'Please enter your last name.');  valid = false; }
+      if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        showError('email', 'Please enter a valid email address.'); valid = false;
+      }
+      if (!message)   { showError('message', 'Please tell us a little about your enquiry.'); valid = false; }
+      if (!privacy) {
+        const el = document.getElementById('privacy-err');
+        el.textContent = 'Please confirm you have read the privacy policy.';
+        el.style.display = 'block';
+        valid = false;
+      } else {
+        const el = document.getElementById('privacy-err');
+        if (el) el.style.display = 'none';
+      }
+
+      if (!valid) {
+        const firstInvalid = form.querySelector('[aria-invalid="true"]');
+        if (firstInvalid) firstInvalid.focus();
+        return;
+      }
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending...';
+
+      // Simulate submission (replace with real backend/formspree endpoint)
+      setTimeout(() => {
+        form.reset();
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Send My Enquiry';
+        successMsg.classList.add('visible');
+        successMsg.focus();
+        window.scrollTo({ top: successMsg.offsetTop - 80, behavior: 'smooth' });
+      }, 1200);
+    });
+  </script>
+
+</body>
+</html>

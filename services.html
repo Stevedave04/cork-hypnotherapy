@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Hypnotherapy treatments in Cork and online. Anxiety, phobias, stop smoking, weight management, sleep, confidence, IBS, trauma, addiction, and more.">
+  <title>Services | Cork Hypnotherapy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .treatment-card {
+      background: var(--color-surface);
+      border-radius: var(--radius-md);
+      border: 1px solid var(--color-border);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: box-shadow var(--duration-normal) var(--ease-out),
+                  transform var(--duration-normal) var(--ease-out);
+    }
+    .treatment-card:hover {
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-3px);
+      cursor: pointer;
+    }
+    .treatment-img {
+      aspect-ratio: 16/9;
+      overflow: hidden;
+    }
+    .treatment-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform var(--duration-normal) var(--ease-out);
+    }
+    .treatment-card:hover .treatment-img img { transform: scale(1.04); }
+    .treatment-body {
+      padding: 1.5rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .treatment-body h3 { font-size: var(--text-xl); margin-bottom: 0.5rem; }
+    .treatment-body p { font-size: var(--text-sm); color: var(--color-muted); flex: 1; margin-bottom: 1rem; }
+    .treatment-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+    .tag {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 0.2em 0.65em;
+      border-radius: 999px;
+      background: var(--color-surface-2);
+      color: var(--color-primary);
+      border: 1px solid var(--color-border);
+    }
+  </style>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <nav class="site-nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="Cork Hypnotherapy home">
+        Cork Hypnotherapy
+        <span>Transform Your Mind</span>
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+      <ul class="nav-links" id="nav-menu" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html" class="active" aria-current="page">Services</a></li>
+        <li><a href="online.html">Online Sessions</a></li>
+        <li><a href="contact.html" class="nav-cta">Book a Consultation</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main id="main-content">
+
+    <header class="page-header" aria-labelledby="page-heading">
+      <div class="container-narrow">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span aria-hidden="true">/</span>
+          <span aria-current="page">Services</span>
+        </nav>
+        <h1 id="page-heading">Hypnotherapy Treatments</h1>
+        <p>We offer a comprehensive range of hypnotherapy programmes for adults and teenagers, delivered in Cork or online across Ireland.</p>
+      </div>
+    </header>
+
+    <!-- Intro -->
+    <section class="section-sm section-alt" aria-labelledby="services-intro-heading">
+      <div class="container">
+        <div class="split">
+          <div>
+            <p class="eyebrow">How We Work</p>
+            <h2 id="services-intro-heading">Every Programme Is Tailored to You</h2>
+            <p>The treatments listed here are starting points, not rigid templates. In your initial consultation we will talk through exactly what you are experiencing, and your therapist will build a programme that fits your situation, your pace, and your goals.</p>
+            <p>Most clients complete a course of between three and eight sessions. Smoking cessation is often achieved in a single extended session. Prices and session lengths vary by treatment; please get in touch for a full breakdown.</p>
+            <a href="contact.html" class="btn btn-primary" style="margin-top:1.25rem;">Discuss Your Treatment</a>
+          </div>
+          <div class="split-img">
+            <img
+              src="https://images.unsplash.com/photo-1544027993-37dbfe43562a?w=800&q=80&auto=format&fit=crop"
+              alt="A calm consultation setting with comfortable chairs and warm, natural lighting"
+              width="800" height="600" loading="lazy"
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Treatment grid -->
+    <section aria-labelledby="treatments-heading">
+      <div class="container">
+        <div class="section-header text-center">
+          <p class="eyebrow">All Treatments</p>
+          <h2 id="treatments-heading">What We Can Help With</h2>
+          <p>From common concerns to more complex challenges, hypnotherapy offers a gentle and effective path forward.</p>
+        </div>
+
+        <div class="grid-3" role="list">
+
+          <!-- Anxiety -->
+          <article class="treatment-card" id="anxiety" role="listitem">
+            <div class="treatment-img">
+              <img src="https://images.unsplash.com/photo-1499209974431-9dddcece7f88?w=600&q=75&auto=format&fit=crop" alt="A person sitting peacefully outdoors, representing calm and relief from anxiety" width="600" height="338" loading="lazy">
+            </div>
+            <div class="treatment-body">
+              <h3>Anxiety &amp; Stress</h3>
+              <p>Anxiety is one of the most common reasons people seek hypnotherapy. We work at the root of your worry patterns, calming the nervous system response and building genuine resilience rather than just coping strategies.</p>
+              <div class="treatment-tags">
+                <span class="tag">Generalised Anxiety</span>
+                <span class="tag">Social Anxiety</span>
+                <span class="tag">Panic Attacks</span>
+                <span class="tag">Work Stress</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Phobias -->
+          <article class="treatment-card" id="phobias" role="listitem">
+            <div class="treatment-img">
+              <img src="https://images.unsplash.com/photo-1474540412665-1cdae210ae6b?w=600&q=75&auto=format&fit=crop" alt="A wide open sky suggesting freedom from fear" width="600" height="338" loading="lazy">
+            </div>
+            <div class="treatment-body">
+              <h3>Phobias &amp; Fears</h3>
+              <p>Whether it is a fear of flying, spiders, heights, needles, or social situations, phobias can severely limit life. Hypnotherapy can resolve them swiftly and permanently in most cases, often in just two to three sessions.</p>
+              <div class="treatment-tags">
+                <span class="tag">Flying</span>
+                <span class="tag">Spiders</span>
+                <span class="tag">Heights</span>
+                <span class="tag">Needles</span>
+                <span class="tag">Driving</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Stop Smoking -->
+          <article class="treatment-card" id="smoking" role="listitem">
+            <div class="treatment-img">
+              <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=600&q=75&auto=format&fit=crop" alt="Clean fresh air representing freedom from smoking" width="600" height="338" loading="lazy">
+            </div>
+            <div class="treatment-body">
+              <h3>Stop Smoking</h3>
+              <p>Our smoking cessation programme addresses both the physical habit and the psychological dependence. Most clients stop completely after a single extended two-hour session, with a follow-up session available if needed.</p>
+              <div class="treatment-tags">
+                <span class="tag">Single Session Available</span>
+                <span class="tag">All Levels</span>
+                <span class="tag">Vaping Also Covered</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Weight Management -->
+          <article class="treatment-card" id="weight" role="listitem">
+            <div class="treatment-img">
+              <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=600&q=75&auto=format&fit=crop" alt="Healthy fresh food representing a positive relationship with eating" width="600" height="338" loading="lazy">
+            </div>
+            <div class="treatment-body">
+              <h3>Weight Management</h3>
+              <p>Hypnotherapy for weight management does not focus on diets. Instead, we change your relationship with food at a subconscious level, addressing emotional eating, portion control, and the beliefs that underpin unhealthy habits.</p>
+              <div class="treatment-tags">
+                <span class="tag">Emotional Eating</span>
+                <span class="tag">Portion Control</span>
+                <span class="tag">Body Confidence</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Sleep -->
+          <article class="treatment-card" id="sleep" role="listitem">
+            <div class="treatment-img">
+              <img src="https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&q=75&auto=format&fit=crop" alt="A peaceful bedroom setting representing restful sleep" width="600" height="338" loading="lazy">
+            </div>
+            <div class="treatment-body">
+              <h3>Sleep &amp; Insomnia</h3>
+              <p>Poor sleep affects everything. We work to quiet the overthinking that keeps you awake, reset your sleep cycles, and teach your mind to associate bed with genuine rest rather than anxious wakefulness.</p>
+              <div class="treatment-tags">
+                <span class="tag">Insomnia</span>
+                <span class="tag">Night Waking</span>
+                <span class="tag">Sleep Anxiety</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Confidence -->
+          <article class="treatment-card" id="confidence" role="listitem">
+            <div class="treatment-img">
+              <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&q=75&auto=format&fit=crop" alt="A confident person presenting to a group, representing self-assurance" width="600" height="338" loading="lazy">
+            </div>
+            <div class="treatment-body">
+              <h3>Confidence &amp; Self-Esteem</h3>
+              <p>Low confidence is often rooted in old stories the subconscious tells us about who we are. We work to replace those limiting beliefs with an accurate and empowering sense of your own capability and worth.</p>
+              <div class="treatment-tags">
+                <span class="tag">Public Speaking</span>
+                <span class="tag">Social Confidence</span>
+                <span class="tag">Self-Worth</span>
+                <span class="tag">Performance</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- IBS / Pain -->
+          <article class="treatment-card" id="ibs" role="listitem">
+            <div class="treatment-img">
+              <img src="https://images.unsplash.com/photo-1559839914-17aae19cec71?w=600&q=75&auto=format&fit=crop" alt="A calm, relaxed person suggesting freedom from physical discomfort" width="600" height="338" loading="lazy">
+            </div>
+            <div class="treatment-body">
+              <h3>IBS &amp; Chronic Pain</h3>
+              <p>There is strong clinical evidence for hypnotherapy in treating irritable bowel syndrome and managing chronic pain. The gut-brain connection means the subconscious mind has a powerful influence on physical symptoms.</p>
+              <div class="treatment-tags">
+                <span class="tag">IBS</span>
+                <span class="tag">Chronic Pain</span>
+                <span class="tag">Tension Headaches</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Trauma / PTSD -->
+          <article class="treatment-card" id="trauma" role="listitem">
+            <div class="treatment-img">
+              <img src="https://images.unsplash.com/photo-1516302752625-fcc3c50ae61f?w=600&q=75&auto=format&fit=crop" alt="Sunlight through trees, representing healing and moving forward" width="600" height="338" loading="lazy">
+            </div>
+            <div class="treatment-body">
+              <h3>Trauma &amp; PTSD</h3>
+              <p>Working safely and gently with past traumatic experiences, hypnotherapy can help neutralise the emotional charge of difficult memories and reduce intrusive thoughts, flashbacks, and hypervigilance.</p>
+              <div class="treatment-tags">
+                <span class="tag">Childhood Trauma</span>
+                <span class="tag">Accident Recovery</span>
+                <span class="tag">Bereavement</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Depression -->
+          <article class="treatment-card" id="depression" role="listitem">
+            <div class="treatment-img">
+              <img src="https://images.unsplash.com/photo-1455849318743-b2233052fcff?w=600&q=75&auto=format&fit=crop" alt="A path leading into light, representing hope and recovery" width="600" height="338" loading="lazy">
+            </div>
+            <div class="treatment-body">
+              <h3>Depression &amp; Low Mood</h3>
+              <p>Hypnotherapy is most effective for depression when used alongside other professional support. We work to lift habitual negative thought patterns and activate the mind's capacity for motivation, pleasure, and hope.</p>
+              <div class="treatment-tags">
+                <span class="tag">Low Motivation</span>
+                <span class="tag">Negative Thinking</span>
+                <span class="tag">Mood Lifting</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Addiction -->
+          <article class="treatment-card" id="addiction" role="listitem">
+            <div class="treatment-img">
+              <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=600&q=75&auto=format&fit=crop" alt="Open hands representing release and letting go of addiction" width="600" height="338" loading="lazy">
+            </div>
+            <div class="treatment-body">
+              <h3>Habits &amp; Addiction</h3>
+              <p>From nail biting to alcohol dependency, habitual behaviours are driven by subconscious patterns. Hypnotherapy gets to the root of why the habit exists and removes the subconscious driver, making change lasting rather than effortful.</p>
+              <div class="treatment-tags">
+                <span class="tag">Alcohol</span>
+                <span class="tag">Nail Biting</span>
+                <span class="tag">Gambling</span>
+                <span class="tag">Binge Eating</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Exam / Performance -->
+          <article class="treatment-card" id="performance" role="listitem">
+            <div class="treatment-img">
+              <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=600&q=75&auto=format&fit=crop" alt="A student studying calmly at a desk, representing focused performance" width="600" height="338" loading="lazy">
+            </div>
+            <div class="treatment-body">
+              <h3>Exam &amp; Performance Anxiety</h3>
+              <p>Whether it is the Leaving Certificate, a driving test, a sports event, or a job interview, performance anxiety can block your true abilities. We help you access a calm, focused state when it matters most.</p>
+              <div class="treatment-tags">
+                <span class="tag">Exams</span>
+                <span class="tag">Sports Performance</span>
+                <span class="tag">Job Interviews</span>
+                <span class="tag">Driving Test</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Grief -->
+          <article class="treatment-card" id="grief" role="listitem">
+            <div class="treatment-img">
+              <img src="https://images.unsplash.com/photo-1542466500-ec5b07f0540e?w=600&q=75&auto=format&fit=crop" alt="A single candle in soft light, representing remembrance and healing" width="600" height="338" loading="lazy">
+            </div>
+            <div class="treatment-body">
+              <h3>Grief &amp; Bereavement</h3>
+              <p>Grief is a natural process, but sometimes it becomes stuck. Hypnotherapy can help you move through grief at your own pace, find a way to carry loss without being consumed by it, and reconnect with life.</p>
+              <div class="treatment-tags">
+                <span class="tag">Loss of a Loved One</span>
+                <span class="tag">Relationship Breakdown</span>
+                <span class="tag">Life Transitions</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- SRS Stroke Recovery -->
+          <article class="treatment-card" id="stroke-recovery" role="listitem">
+            <div class="treatment-img">
+              <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&q=75&auto=format&fit=crop" alt="A person in a calm rehabilitation setting, representing recovery and renewed hope" width="600" height="338" loading="lazy">
+            </div>
+            <div class="treatment-body">
+              <h3>Stroke Recovery <span class="badge" style="vertical-align:middle;font-size:0.65rem;">SRS Protocol</span></h3>
+              <p>The Stroke Recovery through Hypnosis programme uses the clinically developed SRS Protocol to support neurological rehabilitation. Working alongside medical care, hypnotherapy helps retrain the brain's response patterns, address anxiety around recovery, rebuild confidence in movement and speech, and support the emotional journey that follows a stroke.</p>
+              <p style="font-size:var(--text-xs);color:var(--color-primary);font-weight:600;margin-top:0.5rem;">
+                <a href="https://www.strokerecoverysuccess.com" target="_blank" rel="noopener noreferrer" style="color:var(--color-primary);">Full programme details at strokerecoverysuccess.com &#8599;</a>
+              </p>
+              <div class="treatment-tags" style="margin-top:0.75rem;">
+                <span class="tag">Post-Stroke Anxiety</span>
+                <span class="tag">Motor Rehabilitation</span>
+                <span class="tag">Speech &amp; Language</span>
+                <span class="tag">Carer Support</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Exampass -->
+          <article class="treatment-card" id="exampass" role="listitem">
+            <div class="treatment-img">
+              <img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=600&q=75&auto=format&fit=crop" alt="A student studying calmly with notes and books, representing focused, confident exam preparation" width="600" height="338" loading="lazy">
+            </div>
+            <div class="treatment-body">
+              <h3>Exampass <span class="badge" style="vertical-align:middle;font-size:0.65rem;">For Students</span></h3>
+              <p>Exampass is a dedicated hypnotherapy programme for students who experience nerves, panic, or mental blanks before and during exams. Using a structured combination of hypnotherapy, visualisation, and confidence-building techniques, Exampass helps students access a calm, focused state precisely when they need it most. Suitable for Leaving Certificate, university, and professional exams.</p>
+              <p style="font-size:var(--text-xs);color:var(--color-primary);font-weight:600;margin-top:0.5rem;">
+                <a href="https://www.exampass.ie" target="_blank" rel="noopener noreferrer" style="color:var(--color-primary);">Full programme details at exampass.ie &#8599;</a>
+              </p>
+              <div class="treatment-tags" style="margin-top:0.75rem;">
+                <span class="tag">Leaving Certificate</span>
+                <span class="tag">University Exams</span>
+                <span class="tag">Exam Panic</span>
+                <span class="tag">Mind Blanks</span>
+                <span class="tag">Revision Focus</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section-teal" aria-labelledby="faq-heading">
+      <div class="container-narrow">
+        <div class="section-header text-center">
+          <p class="eyebrow">Common Questions</p>
+          <h2 id="faq-heading">Frequently Asked Questions</h2>
+        </div>
+
+        <details class="faq">
+          <summary>How many sessions will I need?</summary>
+          <div class="faq-body">This varies by treatment and individual. Most clients complete between three and six sessions. Smoking cessation often requires just one extended session. Your therapist will give you a realistic expectation at your free initial consultation.</div>
+        </details>
+
+        <details class="faq">
+          <summary>Does hypnotherapy actually work?</summary>
+          <div class="faq-body">Yes, for the right conditions and with the right therapist. There is a growing body of clinical research supporting hypnotherapy for anxiety, IBS, phobias, smoking cessation, and pain management. It is most effective when the client is genuinely motivated and open to the process.</div>
+        </details>
+
+        <details class="faq">
+          <summary>Will I lose control or be made to do things?</summary>
+          <div class="faq-body">No. This is a very common misconception fuelled by stage hypnosis. You remain fully aware and in control throughout your session. You cannot be made to do or say anything against your will. The hypnotic state is simply a deeply relaxed, focused state of attention.</div>
+        </details>
+
+        <details class="faq">
+          <summary>What happens in a session?</summary>
+          <div class="faq-body">We begin with a conversation about what has brought you in and what you want to achieve. The hypnotherapy element involves me guiding you into a deeply relaxed state using a combination of breathing, visualisation, and language. You remain comfortable throughout and remember the session afterwards.</div>
+        </details>
+
+        <details class="faq">
+          <summary>How long does each session last?</summary>
+          <div class="faq-body">Standard sessions are 60 minutes. The smoking cessation session is extended to 90 to 120 minutes. Your free initial consultation lasts approximately 30 minutes and is conducted by phone or video call.</div>
+        </details>
+
+        <details class="faq">
+          <summary>Can I combine hypnotherapy with other treatments?</summary>
+          <div class="faq-body">Absolutely. Hypnotherapy works well alongside counselling, psychotherapy, and GP-managed medication. We simply ask that you inform us of any other treatments or medications you are receiving so we can tailor the approach appropriately.</div>
+        </details>
+
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-band" aria-labelledby="services-cta-heading">
+      <div class="container-narrow">
+        <p class="eyebrow" style="color:var(--color-accent);">Not Sure Where to Start?</p>
+        <h2 id="services-cta-heading">Book a Free Consultation</h2>
+        <p>Your free initial consultation is a relaxed conversation where we can discuss what you are going through, which treatment would suit you best, and any questions you have. No obligation and fully confidential.</p>
+        <a href="contact.html" class="btn btn-primary" style="font-size:var(--text-lg);padding:1rem 2.5rem;">Book Your Free Consultation</a>
+        <p style="margin-top:1.25rem; font-size:var(--text-sm); color:rgba(255,255,255,0.6);">Or call us on <a href="tel:0879394128" style="color:rgba(255,255,255,0.85);">087 939 4128</a></p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" aria-label="Site footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>Cork Hypnotherapy</h3>
+          <p>Professional clinical hypnotherapy in Cork city and online. Helping people across Ireland live calmer, more confident lives.</p>
+          <a href="https://EAPH.ie" title="European Association of Professional Hypnotherapists Accredited Member" target="_blank" rel="noopener noreferrer" style="display:inline-block;margin-top:1rem;">
+            <img src="https://eaph.ie/wp-content/uploads/2019/06/eaph-website-badge-250x.jpg" width="180" height="63" alt="Accredited Member of the European Association of Professional Hypnotherapists" style="display:block;border-radius:4px;">
+          </a>
+        </div>
+        <div class="footer-col">
+          <h4>Treatments</h4>
+          <ul>
+            <li><a href="#anxiety">Anxiety &amp; Stress</a></li>
+            <li><a href="#phobias">Phobias</a></li>
+            <li><a href="#smoking">Stop Smoking</a></li>
+            <li><a href="#weight">Weight Management</a></li>
+            <li><a href="#sleep">Sleep &amp; Insomnia</a></li>
+            <li><a href="#confidence">Confidence</a></li>
+            <li><a href="#stroke-recovery">Stroke Recovery (SRS)</a></li>
+            <li><a href="#exampass">Exampass</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="online.html">Online Sessions</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="tel:0879394128">087 939 4128</a></li>
+            <li><a href="mailto:hello@corkhypnotherapy.com">hello@corkhypnotherapy.com</a></li>
+            <li style="color:rgba(255,255,255,0.55); font-size:var(--text-sm); margin-top:0.25rem;">Ardfield, Clonakilty, Co. Cork</li>
+            <li style="color:rgba(255,255,255,0.55); font-size:var(--text-sm); margin-top:0.5rem;">Mon-Sat: 9am to 7pm</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2025 Cork Hypnotherapy. All rights reserved.</span>
+        <span>Designed with care in Cork, Ireland</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.nav-toggle');
+    const menu   = document.querySelector('.nav-links');
+    toggle.addEventListener('click', () => {
+      const open = menu.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open);
+    });
+    document.addEventListener('click', e => {
+      if (!e.target.closest('.site-nav')) {
+        menu.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  </script>
+
+</body>
+</html>
