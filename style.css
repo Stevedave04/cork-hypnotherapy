@@ -319,9 +319,9 @@ a:focus-visible {
   inset: 0;
   background: linear-gradient(
     135deg,
-    rgba(30,77,92,0.88) 0%,
-    rgba(45,106,122,0.72) 60%,
-    rgba(122,170,143,0.35) 100%
+    rgba(4,4,89,0.92) 0%,
+    rgba(4,4,89,0.78) 60%,
+    rgba(4,4,89,0.55) 100%
   );
 }
 
@@ -331,7 +331,7 @@ a:focus-visible {
   padding-block: var(--space-2xl);
 }
 
-.hero-content .eyebrow { color: var(--color-accent); }
+.hero-content .eyebrow { color: #c9c5c9; letter-spacing: 0.15em; }
 
 .hero h1 {
   color: #fff;
@@ -366,12 +366,12 @@ a:focus-visible {
   align-items: center;
   gap: 0.5rem;
   font-size: var(--text-sm);
-  color: rgba(255,255,255,0.80);
+  color: #ffffff;
 }
 .trust-icon {
   width: 20px;
   height: 20px;
-  color: var(--color-accent);
+  color: #c9c5c9;
   flex-shrink: 0;
 }
 
