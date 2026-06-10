@@ -131,7 +131,7 @@ body {
   padding: 0.5rem 0.875rem;
   font-size: var(--text-sm);
   font-weight: 500;
-  color: var(--color-muted);
+  color: #1a1a4e;
   text-decoration: none;
   border-radius: var(--radius-sm);
   transition: color var(--duration-fast), background var(--duration-fast);
@@ -139,7 +139,7 @@ body {
 .nav-links a:hover,
 .nav-links a.active {
   color: var(--color-primary);
-  background: var(--color-surface-2);
+  background: #e4e1de;
 }
 .nav-links a:focus-visible {
   outline: 3px solid var(--color-primary);
