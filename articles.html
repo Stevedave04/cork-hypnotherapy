@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Honest, evidence-based articles on clinical hypnotherapy from John A O'Connor. Covering anxiety, stop smoking, IBS, sleep, confidence, and more.">
+  <title>Articles | Cork Hypnotherapy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .articles-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr));
+      gap: 1.75rem;
+      margin-top: 2.5rem;
+    }
+    .article-card {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: box-shadow var(--duration-normal) var(--ease-out), transform var(--duration-normal) var(--ease-out);
+    }
+    .article-card:hover {
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-3px);
+    }
+    .article-card-body {
+      padding: 1.75rem;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+    .article-card-tag {
+      display: inline-block;
+      font-size: var(--text-xs);
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--color-primary);
+      background: rgba(4,4,89,0.08);
+      padding: 0.25rem 0.6rem;
+      border-radius: var(--radius-sm);
+      margin-bottom: 0.85rem;
+    }
+    .article-card h2 {
+      font-size: var(--text-xl);
+      line-height: 1.3;
+      margin-bottom: 0.75rem;
+      color: var(--color-primary);
+    }
+    .article-card h2 a {
+      color: inherit;
+      text-decoration: none;
+    }
+    .article-card h2 a:hover { color: var(--color-secondary); }
+    .article-card p {
+      font-size: var(--text-sm);
+      color: var(--color-muted);
+      line-height: 1.7;
+      flex: 1;
+      margin-bottom: 1.25rem;
+    }
+    .article-card-meta {
+      font-size: var(--text-xs);
+      color: var(--color-muted);
+      display: flex;
+      gap: 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--color-border);
+    }
+    .article-card-meta span { display: flex; align-items: center; gap: 0.3rem; }
+    .article-card-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: var(--text-sm);
+      font-weight: 600;
+      color: var(--color-primary);
+      text-decoration: none;
+      margin-bottom: 1rem;
+    }
+    .article-card-link:hover { color: var(--color-secondary); }
+    .article-card-link svg { transition: transform var(--duration-fast); }
+    .article-card-link:hover svg { transform: translateX(3px); }
+    .coming-soon-card {
+      background: var(--color-surface-2);
+      border: 1px dashed var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: 1.75rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-height: 220px;
+      opacity: 0.7;
+    }
+    .coming-soon-card .article-card-tag { background: var(--color-surface-2); }
+    .coming-soon-card h2 { font-size: var(--text-lg); color: var(--color-muted); }
+    .coming-soon-card p { font-size: var(--text-sm); color: var(--color-muted); margin: 0; }
+  </style>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <nav class="site-nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="Cork Hypnotherapy home">
+        Cork Hypnotherapy
+        <span>Transform Your Mind</span>
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+      <ul class="nav-links" id="nav-menu" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="online.html">Online Sessions</a></li>
+        <li><a href="articles.html" class="active" aria-current="page">Articles</a></li>
+        <li><a href="contact.html" class="nav-cta">Book a Consultation</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main id="main-content">
+
+    <header class="page-header" aria-labelledby="page-heading">
+      <div class="container-narrow">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span aria-hidden="true">/</span>
+          <span aria-current="page">Articles</span>
+        </nav>
+        <h1 id="page-heading">Articles</h1>
+        <p>Honest, evidence-based writing on hypnotherapy, mental health, and the science behind lasting change.</p>
+      </div>
+    </header>
+
+    <section class="section" aria-labelledby="articles-heading">
+      <div class="container">
+        <h2 id="articles-heading" class="visually-hidden">All articles</h2>
+
+        <div class="articles-grid">
+
+          <!-- Article 1 -->
+          <article class="article-card">
+            <div class="article-card-body">
+              <span class="article-card-tag">Evidence &amp; Research</span>
+              <h2><a href="blog-does-hypnotherapy-work.html">Does Hypnotherapy Actually Work? What the Research Shows</a></h2>
+              <p>Before booking a session, many people want to know whether hypnotherapy has real science behind it. An honest look at what clinical evidence says across anxiety, IBS, smoking cessation, chronic pain, and sleep.</p>
+              <a href="blog-does-hypnotherapy-work.html" class="article-card-link" aria-label="Read: Does Hypnotherapy Actually Work?">
+                Read article
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+              <div class="article-card-meta">
+                <span>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                  29 June 2026
+                </span>
+                <span>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                  8 minute read
+                </span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Article 2 -->
+          <article class="article-card">
+            <div class="article-card-body">
+              <span class="article-card-tag">Stop Smoking</span>
+              <h2><a href="blog-stop-smoking-hypnotherapy.html">How to Stop Smoking with Hypnotherapy: What Really Happens in the Session</a></h2>
+              <p>Most people who seek stop smoking hypnotherapy are not first-time quitters. This article explains why willpower-based methods often fail, and walks through exactly what happens during a two-hour cessation session.</p>
+              <a href="blog-stop-smoking-hypnotherapy.html" class="article-card-link" aria-label="Read: How to Stop Smoking with Hypnotherapy">
+                Read article
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+              <div class="article-card-meta">
+                <span>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                  29 June 2026
+                </span>
+                <span>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                  9 minute read
+                </span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Coming soon: Online hypnotherapy -->
+          <div class="coming-soon-card" aria-label="Article coming soon">
+            <span class="article-card-tag">Online Sessions</span>
+            <h2>Online Hypnotherapy: Is It As Effective As In-Person?</h2>
+            <p>Coming soon</p>
+          </div>
+
+          <!-- Coming soon: IBS -->
+          <div class="coming-soon-card" aria-label="Article coming soon">
+            <span class="article-card-tag">IBS &amp; Chronic Pain</span>
+            <h2>Hypnotherapy for IBS: The Gut-Brain Connection Explained</h2>
+            <p>Coming soon</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-band" aria-labelledby="articles-cta-heading">
+      <div class="container-narrow">
+        <p class="eyebrow" style="color:var(--color-accent);">Questions?</p>
+        <h2 id="articles-cta-heading">Not Sure If Hypnotherapy Is Right for You?</h2>
+        <p>Your 10 minute discovery call with John A is completely confidential, costs nothing, and carries no obligation. It is the right place to start.</p>
+        <a href="contact.html" class="btn btn-primary" style="font-size:var(--text-lg);padding:1rem 2.5rem;">Book Your 10 Minute Discovery Call</a>
+        <p style="margin-top:1.25rem; font-size:var(--text-sm); color:rgba(255,255,255,0.6);">Or call <a href="tel:0894119837" style="color:rgba(255,255,255,0.85);">089 411 9837</a> or <a href="tel:0879394128" style="color:rgba(255,255,255,0.85);">087 939 4128</a></p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" aria-label="Site footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>Cork Hypnotherapy</h3>
+          <p>Professional clinical hypnotherapy in West Cork and online. Helping people across Ireland live calmer, more confident lives.</p>
+          <a href="https://EAPH.ie" title="European Association of Professional Hypnotherapists Accredited Member" target="_blank" rel="noopener noreferrer" style="display:inline-block;margin-top:1rem;">
+            <img src="https://eaph.ie/wp-content/uploads/2019/06/eaph-website-badge-250x.jpg" width="180" height="63" alt="Accredited Member of the European Association of Professional Hypnotherapists" style="display:block;border-radius:4px;">
+          </a>
+          <a href="https://g.page/r/CcQQ2iqj858HEAI/review" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:0.4rem;margin-top:0.75rem;font-size:var(--text-sm);color:rgba(255,255,255,0.75);text-decoration:none;" aria-label="Leave a Google review for Cork Hypnotherapy">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            Leave us a Google review
+          </a>
+        </div>
+        <div class="footer-col">
+          <h4>Treatments</h4>
+          <ul>
+            <li><a href="services.html#anxiety">Anxiety &amp; Stress</a></li>
+            <li><a href="services.html#phobias">Phobias</a></li>
+            <li><a href="services.html#smoking">Stop Smoking</a></li>
+            <li><a href="services.html#weight">Weight Loss (SIMOS)</a></li>
+            <li><a href="services.html#sleep">Sleep &amp; Insomnia</a></li>
+            <li><a href="services.html#stroke-recovery">Stroke Recovery (SRS)</a></li>
+            <li><a href="services.html#exampass">Exampass</a></li>
+            <li><a href="services.html">All Treatments</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="online.html">Online Sessions</a></li>
+            <li><a href="articles.html">Articles</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="tel:0894119837">089 411 9837</a></li>
+            <li><a href="tel:0879394128">087 939 4128</a></li>
+            <li><a href="mailto:hello@corkhypnotherapy.com">hello@corkhypnotherapy.com</a></li>
+            <li style="color:rgba(255,255,255,0.55); font-size:var(--text-sm); margin-top:0.25rem;">Ardfield, Clonakilty, Co. Cork</li>
+            <li style="color:rgba(255,255,255,0.55); font-size:var(--text-sm); margin-top:0.5rem;">Mon-Sat: 9am to 7pm</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Cork Hypnotherapy. All rights reserved.</span>
+        <span>Designed with care in Cork, Ireland</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.nav-toggle');
+    const menu   = document.querySelector('.nav-links');
+    toggle.addEventListener('click', () => {
+      const open = menu.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open);
+    });
+    document.addEventListener('click', e => {
+      if (!e.target.closest('.site-nav')) {
+        menu.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  </script>
+
+</body>
+</html>
