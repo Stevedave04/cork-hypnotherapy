@@ -41,7 +41,10 @@
     .article-body {
       max-width: 740px;
       margin-inline: auto;
-      padding: clamp(2.5rem, 5vw, 4rem) var(--space-4);
+      padding: clamp(2.5rem, 5vw, 4rem) var(--space-lg);
+    }
+    @media (max-width: 768px) {
+      .article-body { padding-inline: var(--space-md); }
     }
     .article-body p {
       font-size: var(--text-base);
