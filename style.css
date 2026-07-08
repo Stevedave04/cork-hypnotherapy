@@ -778,11 +778,8 @@ textarea { min-height: 140px; resize: vertical; }
   .footer-grid { grid-template-columns: 1fr 1fr; gap: var(--space-lg); }
   .grid-4 { grid-template-columns: repeat(2, 1fr); }
   .stats-grid { grid-template-columns: repeat(2, 1fr); }
-}
 
-@media (max-width: 768px) {
-  :root { --space-2xl: 3rem; }
-
+  /* Collapse main nav to hamburger before the links wrap */
   .nav-links { display: none; flex-direction: column; gap: 0; }
   .nav-links.open {
     display: flex;
@@ -815,6 +812,10 @@ textarea { min-height: 140px; resize: vertical; }
   }
   .nav-toggle { display: flex; align-items: center; justify-content: center; }
   .site-nav { position: relative; }
+}
+
+@media (max-width: 768px) {
+  :root { --space-2xl: 3rem; }
 
   .split { grid-template-columns: 1fr; gap: var(--space-lg); }
   .split.reverse { direction: ltr; }
