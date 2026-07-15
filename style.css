@@ -311,7 +311,7 @@ a:focus-visible {
   height: 100%;
   object-fit: cover;
   object-position: center 30%;
-  opacity: 0.6;
+  opacity: 0.9;
 }
 
 .hero-overlay {
@@ -319,10 +319,10 @@ a:focus-visible {
   inset: 0;
   background: linear-gradient(
     105deg,
-    rgba(4,4,89,0.97) 0%,
-    rgba(4,4,89,0.92) 35%,
-    rgba(4,4,89,0.60) 60%,
-    rgba(4,4,89,0.15) 100%
+    rgba(4,4,89,0.85) 0%,
+    rgba(4,4,89,0.70) 35%,
+    rgba(4,4,89,0.40) 60%,
+    rgba(4,4,89,0.10) 100%
   );
 }
 
@@ -335,7 +335,7 @@ a:focus-visible {
 .hero-content .eyebrow { color: #c9c5c9; letter-spacing: 0.15em; }
 
 .hero h1 {
-  color: #fff;
+  color: #c0c0c0;
   margin-bottom: 1.25rem;
 }
 
