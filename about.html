@@ -17,20 +17,36 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="style.css?v=4">
   <style>
-    /* Bio section: portrait photo layout */
-    #bio-section .split {
-      align-items: flex-start;
-    }
-    #bio-section .split-img {
-      aspect-ratio: 3 / 4;
-      max-width: 420px;
+    /* Bio section: wide banner photo above a single readable text column */
+    #bio-section .bio-photo {
+      aspect-ratio: 16 / 9;
       width: 100%;
+      overflow: hidden;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-md);
+      margin-bottom: var(--space-lg);
     }
-    @media (max-width: 768px) {
-      #bio-section .split-img {
-        max-width: 100%;
-        aspect-ratio: 4 / 5;
-      }
+    #bio-section .bio-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 30%;
+      display: block;
+    }
+    #bio-section .bio-text {
+      max-width: 760px;
+      margin-inline: auto;
+      text-align: center;
+    }
+    #bio-section .bio-text p {
+      text-align: left;
+      max-width: none;
+    }
+    #bio-section .bio-text .btn-row {
+      justify-content: center;
+    }
+    @media (max-width: 600px) {
+      #bio-section .bio-photo { aspect-ratio: 4 / 3; }
     }
   </style>
 </head>
@@ -78,29 +94,26 @@
     <!-- Bio section -->
     <section id="bio-section" aria-labelledby="bio-heading">
       <div class="container">
-        <div class="split">
-          <div class="split-img" style="aspect-ratio:3/4; max-width:420px;">
-            <img
-              src="https://exampass.ie/wp-content/uploads/2024/07/JohnOConnor-Bio-exam-pass.jpg"
-              alt="John A O'Connor, clinical hypnotherapist at Cork Hypnotherapy"
-              width="800"
-              height="1067"
-              loading="eager"
-              style="object-position: top center;"
-            >
-          </div>
-          <div>
-            <p class="eyebrow">Your Therapist</p>
-            <h2 id="bio-heading">John A O'Connor: Over 30 Years Helping Cork &amp; Beyond</h2>
-            <p>Welcome. If you are reading this, something has probably brought you to a point where you are ready to try something different. I have spent more than thirty years working with people who feel exactly that way: anxious, stuck, or exhausted by a pattern they cannot break on their own. My name is John A O'Connor. I relocated to West Cork in summer 2023, and I have enjoyed the good fortune of studying with some of the leading names in complementary therapies along the way. Helping people move past what is holding them back is the work I find most meaningful.</p>
-            <p>My interest in this field goes back a long way. As a wide-eyed seven year old, I met the hypnotist Paul Goldin, and my curiosity about the mind has never really left me since. That early spark grew into a career spent studying, practising, and helping people from all over the world work through all sorts of difficulties and challenges.</p>
-            <p>I am an accredited member of the European Association of Professional Hypnotherapists (EAPH) and an International Speaker, with additional qualifications in psychotherapy, cognitive behavioural hypnotherapy (CBH), solution-focused brief therapy (SFBT), NLP (Neuro Linguistic Programming), SBT (Superconscious Breakthrough Therapy), and other complementary approaches including Reiki, Pranic Healing, and somatic release. I undertake regular continuing professional development to ensure my practice reflects current, evidence-based methods.</p>
-            <p>Why do I do this work? Because I understand what it means to face down real adversity, and to keep going. In 2011 I was given a difficult prognosis by my GP. I have since faced serious health challenges of my own, including a stroke that I was told I might never fully recover from. I did recover, with the support of excellent medical care and a great deal of determination. That experience shapes how I work with every client: I know what it costs to fight for your own recovery, and I do not take lightly the trust people place in me when they come to see me for their own.</p>
-            <p>I work with adults and teenagers on issues ranging from anxiety and phobias to smoking cessation, weight loss (SIMOS), confidence, and stroke recovery support. Every client I see receives my full attention and a programme built around their unique circumstances.</p>
-            <div style="margin-top:1.5rem; display:flex; flex-wrap:wrap; gap:0.75rem;">
-              <a href="contact.html" class="btn btn-primary">Book Your 10 Minute Discovery Call</a>
-              <a href="services.html" class="btn btn-outline">View Treatments</a>
-            </div>
+        <div class="bio-photo">
+          <img
+            src="https://www.image2url.com/r2/default/images/1786485515535-87d91690-5a83-46eb-85f1-719e80bb1243.jpeg"
+            alt="John A O'Connor speaking as an accredited International Speaker at a hypnotherapy conference"
+            width="1600"
+            height="1200"
+            loading="eager"
+          >
+        </div>
+        <div class="bio-text">
+          <p class="eyebrow">Your Therapist</p>
+          <h2 id="bio-heading">John A O'Connor: Over 30 Years Helping Cork &amp; Beyond</h2>
+          <p>Welcome. If you are reading this, something has probably brought you to a point where you are ready to try something different. I have spent more than thirty years working with people who feel exactly that way: anxious, stuck, or exhausted by a pattern they cannot break on their own. My name is John A O'Connor. I relocated to West Cork in summer 2023, and I have enjoyed the good fortune of studying with some of the leading names in complementary therapies along the way. Helping people move past what is holding them back is the work I find most meaningful.</p>
+          <p>My interest in this field goes back a long way. As a wide-eyed seven year old, I met the hypnotist Paul Goldin, and my curiosity about the mind has never really left me since. That early spark grew into a career spent studying, practising, and helping people from all over the world work through all sorts of difficulties and challenges.</p>
+          <p>I am an accredited member of the European Association of Professional Hypnotherapists (EAPH) and an International Speaker, with additional qualifications in psychotherapy, cognitive behavioural hypnotherapy (CBH), solution-focused brief therapy (SFBT), NLP (Neuro Linguistic Programming), SBT (Superconscious Breakthrough Therapy), and other complementary approaches including Reiki, Pranic Healing, and somatic release. I undertake regular continuing professional development to ensure my practice reflects current, evidence-based methods.</p>
+          <p>Why do I do this work? Because I understand what it means to face down real adversity, and to keep going. In 2011 I was given a difficult prognosis by my GP. I have since faced serious health challenges of my own, including a stroke that I was told I might never fully recover from. I did recover, with the support of excellent medical care and a great deal of determination. That experience shapes how I work with every client: I know what it costs to fight for your own recovery, and I do not take lightly the trust people place in me when they come to see me for their own.</p>
+          <p>I work with adults and teenagers on issues ranging from anxiety and phobias to smoking cessation, weight loss (SIMOS), confidence, and stroke recovery support. Every client I see receives my full attention and a programme built around their unique circumstances.</p>
+          <div class="btn-row" style="margin-top:1.5rem; display:flex; flex-wrap:wrap; gap:0.75rem;">
+            <a href="contact.html" class="btn btn-primary">Book Your 10 Minute Discovery Call</a>
+            <a href="services.html" class="btn btn-outline">View Treatments</a>
           </div>
         </div>
       </div>
