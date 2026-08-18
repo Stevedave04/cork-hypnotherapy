@@ -415,7 +415,7 @@
                   >
                   <div>
                     <label for="privacy" style="font-weight:400;font-size:var(--text-sm);cursor:pointer;">
-                      I have read and agree to the <a href="#" style="color:var(--color-primary);">privacy policy</a>. I understand that my information will be held securely and used only to respond to this enquiry.
+                      I have read and agree to the <a href="/privacy" style="color:var(--color-primary);">privacy policy</a>. I understand that my information will be held securely and used only to respond to this enquiry.
                     </label>
                     <span id="privacy-err" class="field-error" aria-live="polite" style="display:none;font-size:var(--text-xs);color:#c0392b;margin-top:0.3rem;display:block;"></span>
                   </div>
@@ -525,8 +525,8 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <span>&copy; 2025 Cork Hypnotherapy. All rights reserved.</span>
-        <span>Designed with care in Cork, Ireland</span>
+        <span>&copy; <span data-year>2026</span> Cork Hypnotherapy. All rights reserved.</span>
+        <span><a href="/privacy" style="color:inherit;">Privacy Policy</a></span>
       </div>
     </div>
   </footer>
@@ -624,6 +624,9 @@
         successMsg.focus();
         window.scrollTo({ top: successMsg.offsetTop - 80, behavior: 'smooth' });
       }, 1200);
+    });
+    document.querySelectorAll('[data-year]').forEach(el => {
+      el.textContent = new Date().getFullYear();
     });
   </script>
 

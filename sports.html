@@ -326,8 +326,8 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <span>&copy; 2026 Cork Hypnotherapy. All rights reserved.</span>
-        <span>Designed with care in Cork, Ireland</span>
+        <span>&copy; <span data-year>2026</span> Cork Hypnotherapy. All rights reserved.</span>
+        <span><a href="/privacy" style="color:inherit;">Privacy Policy</a></span>
       </div>
     </div>
   </footer>
@@ -344,6 +344,9 @@
         menu.classList.remove('open');
         toggle.setAttribute('aria-expanded', 'false');
       }
+    });
+    document.querySelectorAll('[data-year]').forEach(el => {
+      el.textContent = new Date().getFullYear();
     });
   </script>
 
