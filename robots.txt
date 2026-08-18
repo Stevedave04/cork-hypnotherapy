@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# /privacy is intentionally left crawlable. It carries a noindex meta tag,
+# and blocking it here would stop crawlers reading that tag at all.
+
+Sitemap: https://corkhypnotherapy.com/sitemap.xml
