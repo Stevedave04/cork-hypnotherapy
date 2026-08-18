@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-GB">
+<html lang="en-IE">
 <head>
   <!-- Analytics is loaded by cookie-consent.js only after opt-in -->
   <script src="/cookie-consent.js" defer></script>
@@ -22,7 +22,7 @@
   <link rel="preload" href="/fonts/source-sans-3-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/lora-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/fonts.css">
-  <link rel="stylesheet" href="style.css?v=6">
+  <link rel="stylesheet" href="style.css?v=7">
   <style>
     /* Bio section: wide banner photo above a single readable text column */
     #bio-section .bio-photo {
@@ -253,6 +253,25 @@
   ]
 }
   </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://corkhypnotherapy.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "About"
+    }
+  ]
+}
+  </script>
 </head>
 <body>
 
@@ -299,20 +318,23 @@
     <section id="bio-section" aria-labelledby="bio-heading">
       <div class="container">
         <div class="bio-photo">
-          <img
-            src="https://www.image2url.com/r2/default/images/1786485515535-87d91690-5a83-46eb-85f1-719e80bb1243.jpeg"
-            alt="John A O'Connor speaking as an accredited International Speaker at a hypnotherapy conference"
-            width="1600"
-            height="1200"
-            loading="eager"
-          >
+          <picture>
+            <source srcset="/images/john-a-oconnor-speaking.webp" type="image/webp">
+            <img
+              src="/images/john-a-oconnor-speaking.jpg"
+              alt="John A O'Connor speaking as an accredited International Speaker at a hypnotherapy conference"
+              width="1600"
+              height="1200"
+              loading="eager"
+            >
+          </picture>
         </div>
         <div class="bio-text">
           <p class="eyebrow">Your Therapist</p>
           <h2 id="bio-heading">John A O'Connor: Over 30 Years Helping Cork &amp; Beyond</h2>
           <p>Welcome. If you are reading this, something has probably brought you to a point where you are ready to try something different. I have spent more than thirty years working with people who feel exactly that way: anxious, stuck, or exhausted by a pattern they cannot break on their own. My name is John A O'Connor. I relocated to West Cork in summer 2023, and I have enjoyed the good fortune of studying with some of the leading names in complementary therapies along the way. Helping people move past what is holding them back is the work I find most meaningful.</p>
           <p>My interest in this field goes back a long way. As a wide-eyed seven year old, I met the hypnotist Paul Goldin, and my curiosity about the mind has never really left me since. That early spark grew into a career spent studying, practising, and helping people from all over the world work through all sorts of difficulties and challenges.</p>
-          <p>I am an accredited member of the European Association of Professional Hypnotherapists (EAPH) and an International Speaker, with additional qualifications in psychotherapy, cognitive behavioural hypnotherapy (CBH), solution-focused brief therapy (SFBT), NLP (Neuro Linguistic Programming), SBT (Superconscious Breakthrough Therapy), and other complementary approaches including Reiki, Pranic Healing, and somatic release. I undertake regular continuing professional development to ensure my practice reflects current, evidence-based methods.</p>
+          <p>I am an accredited member of the European Association of Professional Hypnotherapists (EAPH) and an International Speaker, with additional qualifications in psychotherapy, cognitive behavioural hypnotherapy (CBH), solution-focused brief therapy (SFBT), NLP (Neuro Linguistic Programming), SBT (Superconscious Breakthrough Therapy), and other complementary approaches including Reiki, Pranic Healing, and somatic release. I undertake regular continuing professional development to ensure my practice reflects current, evidence-based methods. If you are deciding between approaches, <a href="/blog-hypnotherapy-vs-cbt-counselling">this comparison of hypnotherapy, CBT and counselling</a> sets out where each one fits.</p>
           <p>Why do I do this work? Because I understand what it means to face down real adversity, and to keep going. In 2011 I was given a difficult prognosis by my GP. I have since faced serious health challenges of my own, including a stroke that I was told I might never fully recover from. I did recover, with the support of excellent medical care and a great deal of determination. That experience shapes how I work with every client: I know what it costs to fight for your own recovery, and I do not take lightly the trust people place in me when they come to see me for their own.</p>
           <p>I work with adults and teenagers on issues ranging from anxiety and phobias to smoking cessation, weight loss (SIMOS), confidence, and stroke recovery support. Every client I see receives my full attention and a programme built around their unique circumstances.</p>
           <div class="btn-row" style="margin-top:1.5rem; display:flex; flex-wrap:wrap; gap:0.75rem;">
@@ -476,7 +498,7 @@
           <h3>Cork Hypnotherapy</h3>
           <p>Professional clinical hypnotherapy in West Cork and online. Helping people across Ireland live calmer, more confident lives.</p>
           <a href="https://EAPH.ie" title="European Association of Professional Hypnotherapists Accredited Member" target="_blank" rel="noopener noreferrer" style="display:inline-block;margin-top:1rem;">
-            <img src="https://eaph.ie/wp-content/uploads/2019/06/eaph-website-badge-250x.jpg" width="180" height="63" alt="Accredited Member of the European Association of Professional Hypnotherapists" style="display:block;border-radius:4px;">
+            <img src="https://eaph.ie/wp-content/uploads/2019/06/eaph-website-badge-250x.jpg" width="180" height="63" alt="Accredited Member of the European Association of Professional Hypnotherapists" style="display:block;border-radius:4px;" loading="lazy">
           </a>
           <a href="https://g.page/r/CcQQ2iqj858HEAI/review" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:0.4rem;margin-top:0.75rem;font-size:var(--text-sm);color:rgba(255,255,255,0.75);text-decoration:none;" aria-label="Leave a Google review for Cork Hypnotherapy">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
