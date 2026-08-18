@@ -1,14 +1,8 @@
 <!DOCTYPE html>
 <html lang="en-GB">
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1L2DKEFTK2"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-1L2DKEFTK2');
-  </script>
+  <!-- Analytics is loaded by cookie-consent.js only after opt-in -->
+  <script src="/cookie-consent.js" defer></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Online hypnotherapy sessions available across Ireland and worldwide. Same professional results as in-clinic, from the comfort of your own home. Book your 10 minute discovery call.">
@@ -27,7 +21,7 @@
   <title>Online Sessions | Cork Hypnotherapy</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="style.css?v=4">
+  <link rel="stylesheet" href="style.css?v=5">
 </head>
 <body>
 
@@ -361,7 +355,7 @@
       </div>
       <div class="footer-bottom">
         <span>&copy; <span data-year>2026</span> Cork Hypnotherapy. All rights reserved.</span>
-        <span><a href="/privacy" style="color:inherit;">Privacy Policy</a></span>
+        <span><a href="/privacy" style="color:inherit;">Privacy Policy</a><span aria-hidden="true" style="opacity:0.5;"> &middot; </span><a href="#" data-cookie-settings style="color:inherit;">Cookie settings</a></span>
       </div>
     </div>
   </footer>

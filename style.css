@@ -837,3 +837,111 @@ textarea { min-height: 140px; resize: vertical; }
   .stats-grid { grid-template-columns: repeat(2, 1fr); }
   .hero-btns { flex-direction: column; align-items: flex-start; }
 }
+
+/* ---- Cookie consent banner ---- */
+.cookie-banner {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  background: var(--color-primary);
+  color: #ffffff;
+  border-top: 3px solid var(--color-accent);
+  box-shadow: 0 -6px 24px rgba(0,0,0,0.25);
+  transform: translateY(100%);
+  transition: transform var(--duration-normal) var(--ease-out);
+}
+.cookie-banner.is-visible { transform: translateY(0); }
+
+.cookie-banner-inner {
+  max-width: 1200px;
+  margin-inline: auto;
+  padding: var(--space-md) var(--space-lg);
+  display: flex;
+  align-items: center;
+  gap: var(--space-lg);
+}
+.cookie-banner-text { flex: 1; }
+.cookie-banner h2 {
+  font-size: var(--text-base);
+  color: #ffffff;
+  margin-bottom: 0.35rem;
+}
+.cookie-banner p {
+  font-size: var(--text-sm);
+  line-height: 1.6;
+  color: rgba(255,255,255,0.85);
+  margin: 0;
+  max-width: 80ch;
+}
+.cookie-banner a { color: #ffffff; text-decoration: underline; text-underline-offset: 2px; }
+
+.cookie-banner-actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-shrink: 0;
+}
+/* Decline must be exactly as easy to find and click as Accept, so both
+   buttons get identical styling - no visual nudge toward accepting.
+   (Overrides .btn-primary, which is navy and would vanish on this banner.) */
+.cookie-banner-actions .btn {
+  min-width: 130px;
+  justify-content: center;
+  background: transparent;
+  color: #ffffff;
+  border: 2px solid rgba(255,255,255,0.85);
+}
+.cookie-banner-actions .btn:hover {
+  background: rgba(255,255,255,0.18);
+  border-color: #ffffff;
+  color: #ffffff;
+  box-shadow: none;
+}
+.cookie-banner-actions .btn:focus-visible {
+  outline: 3px solid #ffffff;
+  outline-offset: 3px;
+}
+
+@media (max-width: 768px) {
+  .cookie-banner-inner {
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--space-sm);
+    padding: var(--space-md);
+  }
+  .cookie-banner-actions .btn { flex: 1; }
+}
+
+/* An embed still waiting on consent has no src yet - collapse it so it does
+   not occupy the slot and hide the placeholder behind it */
+[data-consent-src]:not([src]) { display: none; }
+
+/* Inside a fixed-height wrapper (e.g. .map-wrap) the placeholder takes over
+   the full slot rather than adding its own box */
+[data-consent-wrap] .consent-placeholder {
+  height: 100%;
+  border: none;
+  border-radius: 0;
+}
+
+/* Placeholder shown in place of a cookie-setting embed until consent */
+.consent-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.85rem;
+  text-align: center;
+  padding: var(--space-lg);
+  min-height: 220px;
+  background: var(--color-surface-2);
+  border: 1px dashed var(--color-border);
+  border-radius: var(--radius-md);
+}
+.consent-placeholder p {
+  margin: 0;
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+  max-width: 40ch;
+}

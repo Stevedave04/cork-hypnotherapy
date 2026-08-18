@@ -1,14 +1,8 @@
 <!DOCTYPE html>
 <html lang="en-GB">
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1L2DKEFTK2"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-1L2DKEFTK2');
-  </script>
+  <!-- Analytics is loaded by cookie-consent.js only after opt-in -->
+  <script src="/cookie-consent.js" defer></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Contact Cork Hypnotherapy to book your free initial consultation. In-clinic in Douglas, Cork or online across Ireland. Call, email or use our contact form.">
@@ -27,7 +21,7 @@
   <title>Contact &amp; Book | Cork Hypnotherapy</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="style.css?v=4">
+  <link rel="stylesheet" href="style.css?v=5">
   <style>
     .contact-grid {
       display: grid;
@@ -259,9 +253,9 @@
             </div>
 
             <!-- Map -->
-            <div class="map-wrap" aria-label="Map showing clinic location in Ardfield, Clonakilty, West Cork">
+            <div class="map-wrap" data-consent-wrap data-consent-label="The map" aria-label="Map showing clinic location in Ardfield, Clonakilty, West Cork">
               <iframe
-                src="https://maps.google.com/maps?q=P85F211+Ardfield+Clonakilty+Ireland&ie=UTF8&&output=embed"
+                data-consent-src="https://maps.google.com/maps?q=P85F211+Ardfield+Clonakilty+Ireland&ie=UTF8&&output=embed"
                 title="Cork Hypnotherapy clinic location, Ballyva, Ardfield, Clonakilty"
                 loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"
@@ -526,7 +520,7 @@
       </div>
       <div class="footer-bottom">
         <span>&copy; <span data-year>2026</span> Cork Hypnotherapy. All rights reserved.</span>
-        <span><a href="/privacy" style="color:inherit;">Privacy Policy</a></span>
+        <span><a href="/privacy" style="color:inherit;">Privacy Policy</a><span aria-hidden="true" style="opacity:0.5;"> &middot; </span><a href="#" data-cookie-settings style="color:inherit;">Cookie settings</a></span>
       </div>
     </div>
   </footer>
