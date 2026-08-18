@@ -4,7 +4,7 @@
     {
       "name": "cork-hypnotherapy",
       "runtimeExecutable": "python3",
-      "runtimeArgs": ["-m", "http.server", "3456"],
+      "runtimeArgs": ["devserver.py", "3456"],
       "port": 3456
     }
   ]
