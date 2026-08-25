@@ -5,3 +5,17 @@
 
 /fonts/*
   Cache-Control: public, max-age=31536000, immutable
+
+# Security headers. Applied to every response.
+# CSP note: this is a no-build static site whose pages carry inline <script>
+# blocks and style="" attributes, and Pages cannot inject a per-request nonce
+# without a Function. script-src/style-src therefore need 'unsafe-inline'.
+# The origin allowlists are still worth having: they stop an injected tag
+# pulling code from a host that is not listed here.
+/*
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), interest-cohort=()
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://assets.calendly.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://assets.calendly.com; img-src 'self' data: https:; font-src 'self'; connect-src 'self' https://www.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://calendly.com; frame-src https://calendly.com https://maps.google.com https://www.google.com; frame-ancestors 'none'; form-action 'self'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests
