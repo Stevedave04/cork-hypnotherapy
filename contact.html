@@ -5,7 +5,7 @@
   <script src="/cookie-consent.js" defer></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Book your 10 minute discovery call with John A O'Connor. Clinic at Ardfield, Clonakilty, Co. Cork, or online anywhere in Ireland.">
+  <meta name="description" content="Book your 30 minute discovery call with John A O'Connor. Clinic at Ardfield, Clonakilty, Co. Cork, or online anywhere in Ireland.">
   <link rel="canonical" href="https://corkhypnotherapy.com/contact">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23040459'/%3E%3Ctext x='50' y='70' font-family='Georgia,serif' font-size='58' fill='%23ffffff' text-anchor='middle'%3EC%3C/text%3E%3C/svg%3E">
   <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23040459'/%3E%3Ctext x='50' y='70' font-family='Georgia,serif' font-size='58' fill='%23ffffff' text-anchor='middle'%3EC%3C/text%3E%3C/svg%3E">
@@ -13,11 +13,11 @@
   <meta property="og:site_name" content="Cork Hypnotherapy">
   <meta property="og:url" content="https://corkhypnotherapy.com/contact">
   <meta property="og:title" content="Book Hypnotherapy in Clonakilty, West Cork">
-  <meta property="og:description" content="Book your 10 minute discovery call with John A O'Connor. Clinic at Ardfield, Clonakilty, Co. Cork, or online anywhere in Ireland.">
+  <meta property="og:description" content="Book your 30 minute discovery call with John A O'Connor. Clinic at Ardfield, Clonakilty, Co. Cork, or online anywhere in Ireland.">
   <meta property="og:image" content="https://corkhypnotherapy.com/images/og-galley-head-lighthouse.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Book Hypnotherapy in Clonakilty, West Cork">
-  <meta name="twitter:description" content="Book your 10 minute discovery call with John A O'Connor. Clinic at Ardfield, Clonakilty, Co. Cork, or online anywhere in Ireland.">
+  <meta name="twitter:description" content="Book your 30 minute discovery call with John A O'Connor. Clinic at Ardfield, Clonakilty, Co. Cork, or online anywhere in Ireland.">
   <title>Book Hypnotherapy in Clonakilty, West Cork</title>
   <link rel="preload" href="/fonts/source-sans-3-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/lora-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
@@ -100,6 +100,31 @@
     }
     @media (max-width: 480px) {
       .form-row { grid-template-columns: 1fr; }
+    }
+
+    .form-error-msg {
+      display: none;
+      gap: 0.6rem;
+      padding: var(--space-sm) var(--space-md);
+      margin-bottom: var(--space-md);
+      background: #fdeceb;
+      border: 1px solid #f0b7b2;
+      border-left: 4px solid #c0392b;
+      border-radius: var(--radius-sm);
+      color: #8c2a20;
+      font-size: var(--text-sm);
+      line-height: 1.5;
+    }
+    .form-error-msg[style*="block"] { display: block; }
+    .form-error-msg:focus { outline: 2px solid #c0392b; outline-offset: 2px; }
+
+    /* Honeypot: off-screen rather than display:none, which some bots skip */
+    .hp-field {
+      position: absolute;
+      left: -9999px;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
     }
 
     .success-msg {
@@ -343,7 +368,7 @@
           <span aria-current="page">Contact</span>
         </nav>
         <h1 id="page-heading">Get in Touch with John A</h1>
-        <p>Book your 10 minute discovery call online using the calendar below, or send a message and John A will get back to you within 72 hours.</p>
+        <p>Book your 30 minute discovery call online using the calendar below, or send a message and John A will get back to you within 72 hours.</p>
       </div>
     </header>
 
@@ -353,11 +378,21 @@
         <div class="section-header text-center">
           <p class="eyebrow">Book Online</p>
           <h2 id="calendly-heading">Choose a Time That Suits You</h2>
-          <p>Select a convenient slot below for your 10 minute discovery call with John A. In-clinic and online appointments available.</p>
+          <p>Select a convenient slot below for your 30 minute discovery call with John A. In-clinic and online appointments available.</p>
         </div>
-        <!-- Calendly inline widget begin -->
-        <div class="calendly-inline-widget" data-url="https://calendly.com/johnaoconnor95/30min" style="min-width:320px;height:700px;border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-md);"></div>
-        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+        <!-- Calendly inline widget begin.
+             Gated behind cookie consent: the widget contacts Calendly and sets
+             its own cookies, so it stays inert until the visitor accepts.
+             Declining still leaves booking one click away via the fallback. -->
+        <div
+          data-consent-wrap
+          data-consent-label="The booking calendar"
+          data-consent-fallback-url="https://calendly.com/johnaoconnor95/30min"
+          data-consent-fallback-text="Or book directly on Calendly instead"
+        >
+          <div class="calendly-inline-widget" data-url="https://calendly.com/johnaoconnor95/30min" style="min-width:320px;height:700px;border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-md);"></div>
+          <script type="text/plain" data-consent-script data-src="https://assets.calendly.com/assets/external/widget.js"></script>
+        </div>
         <!-- Calendly inline widget end -->
       </div>
     </section>
@@ -454,7 +489,7 @@
           <!-- Right: form -->
           <div>
             <div class="form-card">
-              <h3 style="font-size:var(--text-2xl);margin-bottom:0.5rem;">Book Your 10 Minute Discovery Call</h3>
+              <h3 style="font-size:var(--text-2xl);margin-bottom:0.5rem;">Book Your 30 Minute Discovery Call</h3>
               <p style="font-size:var(--text-sm);color:var(--color-muted);margin-bottom:1.5rem;">Fill in the form below and we will be in touch within 72 hours to arrange a convenient time. All enquiries are completely confidential and GDPR compliant. Not sure what to expect? Read <a href="/blog-first-hypnotherapy-session" style="color:var(--color-primary);">what happens in a first session</a>.</p>
 
               <div class="success-msg" id="success-msg" role="status" aria-live="polite">
@@ -462,7 +497,16 @@
                 Thank you for your message. We will be in touch very shortly.
               </div>
 
+              <div class="form-error-msg" id="form-error" role="alert" tabindex="-1" style="display:none;"></div>
+
               <form id="contact-form" novalidate aria-label="Booking and enquiry form">
+
+                <!-- Honeypot: hidden from people, tempting to bots. Anything
+                     typed here means the submission is discarded server side. -->
+                <div class="hp-field" aria-hidden="true">
+                  <label for="website">Leave this field empty</label>
+                  <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+                </div>
 
                 <div class="form-row">
                   <div class="form-group">
@@ -629,7 +673,7 @@
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
             </div>
             <h4>No Obligation</h4>
-            <p style="font-size:var(--text-sm);color:var(--color-muted);">The 10 minute discovery call carries no pressure or commitment to continue.</p>
+            <p style="font-size:var(--text-sm);color:var(--color-muted);">The 30 minute discovery call carries no pressure or commitment to continue.</p>
           </div>
           <div>
             <div class="icon-circle" style="margin-inline:auto;" aria-hidden="true">
@@ -745,6 +789,7 @@
     const form      = document.getElementById('contact-form');
     const submitBtn = document.getElementById('submit-btn');
     const successMsg = document.getElementById('success-msg');
+    const formError  = document.getElementById('form-error');
 
     function showError(fieldId, message) {
       const el = document.getElementById(fieldId + '-err');
@@ -797,16 +842,40 @@
 
       submitBtn.disabled = true;
       submitBtn.textContent = 'Sending...';
+      formError.style.display = 'none';
 
-      // Simulate submission (replace with real backend/formspree endpoint)
-      setTimeout(() => {
-        form.reset();
-        submitBtn.disabled = false;
-        submitBtn.textContent = 'Send My Enquiry';
-        successMsg.classList.add('visible');
-        successMsg.focus();
-        window.scrollTo({ top: successMsg.offsetTop - 80, behavior: 'smooth' });
-      }, 1200);
+      const data = Object.fromEntries(new FormData(form).entries());
+      data.privacy = privacy;
+
+      fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      })
+        .then(res => res.json().catch(() => ({})).then(body => ({ res, body })))
+        .then(({ res, body }) => {
+          if (!res.ok || !body.ok) {
+            // Field-level problems the server caught that the browser did not
+            if (body.errors) {
+              Object.keys(body.errors).forEach(f => showError(f, body.errors[f]));
+            }
+            throw new Error(body.error || 'Sorry, we could not send that just now. Please email hello@corkhypnotherapy.com or ring 089 411 9837.');
+          }
+          form.reset();
+          successMsg.classList.add('visible');
+          successMsg.focus();
+          window.scrollTo({ top: successMsg.offsetTop - 80, behavior: 'smooth' });
+        })
+        .catch(err => {
+          // Never claim it sent when it did not: say so and offer another route
+          formError.textContent = err.message;
+          formError.style.display = 'block';
+          formError.focus();
+        })
+        .finally(() => {
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Send My Enquiry';
+        });
     });
     document.querySelectorAll('[data-year]').forEach(el => {
       el.textContent = new Date().getFullYear();

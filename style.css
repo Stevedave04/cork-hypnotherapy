@@ -923,6 +923,28 @@ textarea { min-height: 140px; resize: vertical; }
   border-radius: 0;
 }
 
+/* A gated script's container reserves its own height (the Calendly widget
+   holds 700px inline). While blocked it is empty, so collapse it and let the
+   placeholder set the height instead of leaving a tall blank gap. */
+[data-consent-blocked] .calendly-inline-widget { display: none; }
+
+/* A wrapper gated by script rather than by a src-less iframe has no fixed
+   height to fill, so the placeholder sizes itself */
+[data-consent-wrap][data-consent-blocked] .consent-placeholder {
+  height: auto;
+  border: 1px dashed var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.consent-placeholder-alt { margin: 0; }
+.consent-placeholder-alt a {
+  font-size: var(--text-sm);
+  color: var(--color-primary);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.consent-placeholder-alt a:hover { text-decoration-thickness: 2px; }
+
 /* Placeholder shown in place of a cookie-setting embed until consent */
 .consent-placeholder {
   display: flex;

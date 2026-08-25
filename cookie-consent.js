@@ -8,6 +8,13 @@
  *   - Google Analytics (GA4) is not injected at all until consent is given.
  *   - Third-party embeds marked [data-consent-src] (e.g. the Google Map) stay
  *     unloaded and show a click-to-load placeholder instead.
+ *   - Third-party scripts marked [data-consent-script] (e.g. the Calendly
+ *     booking widget) are inert until consent, because loading one tells the
+ *     provider who is on the page and lets it set its own cookies.
+ *
+ * Anything gated must stay reachable another way. A visitor who declines can
+ * still book: the booking placeholder links straight out to Calendly, so
+ * declining costs a click, never the appointment.
  *
  * Declining is a single click, exactly like accepting - no dark patterns, and
  * no cookie wall: every page works fully either way. The choice is stored for
@@ -88,30 +95,75 @@
     document.querySelectorAll('[data-consent-src]').forEach(function (el) {
       if (el.getAttribute('src')) return;
       el.setAttribute('src', el.getAttribute('data-consent-src'));
-      var ph = el.closest('[data-consent-wrap]');
-      if (ph) {
-        var note = ph.querySelector('[data-consent-placeholder]');
-        if (note) note.remove();
-      }
+      clearPlaceholder(el.closest('[data-consent-wrap]'));
     });
+
+    // Gated third-party scripts. The markup carries an inert placeholder tag
+    // (type="text/plain", url in data-src) which the browser never fetches;
+    // consent swaps in a real script element that does.
+    document.querySelectorAll('script[data-consent-script]').forEach(function (tpl) {
+      if (tpl.getAttribute('data-consent-loaded')) return;
+      tpl.setAttribute('data-consent-loaded', '1');
+
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = tpl.getAttribute('data-src');
+      document.head.appendChild(s);
+      clearPlaceholder(tpl.closest('[data-consent-wrap]'));
+    });
+  }
+
+  function clearPlaceholder(wrap) {
+    if (!wrap) return;
+    var note = wrap.querySelector('[data-consent-placeholder]');
+    if (note) note.remove();
+    wrap.removeAttribute('data-consent-blocked');
+  }
+
+  function isWrapLoaded(wrap) {
+    var frame = wrap.querySelector('[data-consent-src]');
+    if (frame) return !!frame.getAttribute('src');
+    var tpl = wrap.querySelector('script[data-consent-script]');
+    if (tpl) return !!tpl.getAttribute('data-consent-loaded');
+    return false;
   }
 
   function showPlaceholders() {
     document.querySelectorAll('[data-consent-wrap]').forEach(function (wrap) {
       if (wrap.querySelector('[data-consent-placeholder]')) return;
-      var frame = wrap.querySelector('[data-consent-src]');
-      if (frame && frame.getAttribute('src')) return;
+      if (isWrapLoaded(wrap)) return;
+
+      // Lets CSS collapse the reserved space the unloaded embed would occupy.
+      wrap.setAttribute('data-consent-blocked', '');
 
       var label = wrap.getAttribute('data-consent-label') || 'This content';
+      var fallbackUrl = wrap.getAttribute('data-consent-fallback-url');
+      var fallbackText = wrap.getAttribute('data-consent-fallback-text');
+
       var ph = document.createElement('div');
       ph.className = 'consent-placeholder';
       ph.setAttribute('data-consent-placeholder', '');
       ph.innerHTML =
         '<p>' + label + ' is hidden because it sets cookies.</p>' +
         '<button type="button" class="btn btn-primary btn-sm">Load ' + label.toLowerCase() + '</button>';
+
       ph.querySelector('button').addEventListener('click', function () {
         accept();
       });
+
+      // Never let a consent choice be the reason someone cannot book.
+      if (fallbackUrl && fallbackText) {
+        var alt = document.createElement('p');
+        alt.className = 'consent-placeholder-alt';
+        var a = document.createElement('a');
+        a.href = fallbackUrl;
+        a.target = '_blank';
+        a.rel = 'noopener';
+        a.textContent = fallbackText;
+        alt.appendChild(a);
+        ph.appendChild(alt);
+      }
+
       wrap.appendChild(ph);
     });
   }
