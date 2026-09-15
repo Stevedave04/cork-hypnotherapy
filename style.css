@@ -965,3 +965,18 @@ textarea { min-height: 140px; resize: vertical; }
   color: var(--color-muted);
   max-width: 40ch;
 }
+
+/* Article byline: the author name links to the About page, where the
+   credentials behind each article live. Sits on the navy article header. */
+/* The byline groups the linked name and its title so the flex gap on
+   .article-meta span does not open a space before the comma. */
+.article-meta .byline { display: inline; }
+
+.article-meta a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: rgba(255,255,255,0.45);
+  text-underline-offset: 3px;
+}
+.article-meta a:hover,
+.article-meta a:focus-visible { text-decoration-color: #ffffff; }
